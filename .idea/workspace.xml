@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eec63583-5257-44dc-b444-0b8f9e56349c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros_teleop/src/drive_speed_conversion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573867409862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="teleop_control.py works">
+      <created>1573891058857</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573891058857</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Trying to do teleop_control.py on the first try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to do teleop_control.py on the first try" />
+    <MESSAGE value="teleop_control.py works" />
+    <option name="LAST_COMMIT_MESSAGE" value="teleop_control.py works" />
   </component>
 </project>
