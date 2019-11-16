@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eec63583-5257-44dc-b444-0b8f9e56349c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros_teleop/ros_teleop.launch" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="origin/master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
