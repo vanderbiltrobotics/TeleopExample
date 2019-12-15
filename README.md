@@ -20,6 +20,23 @@ catkin_make              # Build all packages in the workspace
 
 Running the command `source {Path to catkin_ws}/catkin_ws/devel/setup.bash` will allow ROS to find your built packages. You will need to run this command each time you open a new terminal if you want ROS to find your packages. To avoid this, you can add that command to the end of your .bashrc and it will run automatically whenever you open a terminal.
 
+5. Run launch files
+
+```
+roslaunch [package_name] <launch file name>
+```
+
+6. Find and print topics
+```
+rostopic list
+rostopic echo [topic_name]
+```
+7. Run rqt_graph
+
+```
+rqt_graph
+```
+
 ## Notes on developing these packages
 
 If you are working on a new version of a particular package, do it on a speparate branch! The master branch should always contain the latest *working version* of each package. Once your new version of a package is working and thoroughly tested, it can be merged into the master branch.
