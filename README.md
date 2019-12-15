@@ -18,7 +18,10 @@ catkin_make              # Build all packages in the workspace
 ```
 4. Sourcing the catkin_ws
 
-Running the command `source {Path to catkin_ws}/catkin_ws/devel/setup.bash` will allow ROS to find your built packages. You will need to run this command each time you open a new terminal if you want ROS to find your packages. To avoid this, you can add that command to the end of your .bashrc and it will run automatically whenever you open a terminal.
+```
+source devel/setup.bash
+```
+Running this command will allow ROS to find your built packages. You will need to run this command each time you open a new terminal if you want ROS to find your packages. To avoid this, you can add that command to the end of your .bashrc and it will run automatically whenever you open a terminal.
 
 5. Run launch files
 
