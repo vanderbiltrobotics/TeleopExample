@@ -72,7 +72,7 @@ class TeleopControl:
         # Drive twist
         drive_msg=Twist()
         drive_msg.linear.x=lin_vel
-        drive_msg.angular.z=ang_vel
+        drive_msg.angular.z=ang_vel*-1
         self.publishers["pub_drive_cmd"].publish(drive_msg)
 
 if __name__ == '__main__':
