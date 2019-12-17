@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eec63583-5257-44dc-b444-0b8f9e56349c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_teleop/src/teleop_control.py" afterDir="false" />
-    </list>
+    <list default="true" id="eec63583-5257-44dc-b444-0b8f9e56349c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576449019163</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added good simulation">
+      <created>1576626723232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576626723232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +93,7 @@
     <MESSAGE value="Trying to do teleop_control.py on the first try" />
     <MESSAGE value="More Teleop Time" />
     <MESSAGE value="Basic Commit (commented out drive_speed_conversion node)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Commit (commented out drive_speed_conversion node)" />
+    <MESSAGE value="Added good simulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added good simulation" />
   </component>
 </project>
