@@ -31,9 +31,31 @@
 
 # import required packages
 import rospy
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Pose2D
 from sensor_msgs.msg import Joy
 from std_msgs.msg import Float64, String
+
+
+JOYSTICK_BUTTON_A = 0
+JOYSTICK_BUTTON_B = 1
+JOYSTICK_BUTTON_X = 2
+JOYSTICK_BUTTON_Y = 3
+JOYSTICK_BUTTON_LB = 4
+JOYSTICK_BUTTON_RB = 5
+JOYSTICK_BUTTON_OPTION = 6
+JOYSTICK_BUTTON_START = 7
+JOYSTICK_BUTTON_POWER = 8
+JOYSTICK_BUTTON_LEFT_STICK = 9
+JOYSTICK_BUTTON_RIGHT_STICK = 10
+
+JOYSTICK_AXIS_LEFT_X = 0
+JOYSTICK_AXIS_LEFT_Y = 1
+JOYSTICK_AXIS_LT = 2
+JOYSTICK_AXIS_RIGHT_X = 3
+JOYSTICK_AXIS_RIGHT_Y = 4
+JOYSTICK_AXIS_RT = 5
+JOYSTICK_AXIS_DPAD_X = 6
+JOYSTICK_AXIS_DPAD_Y = 7
 
 
 class TeleopControl:
@@ -42,9 +64,10 @@ class TeleopControl:
     def __init__(self):
         # Initialize drive speed publishers
         self.publishers = {
-            "pub_drive_cmd": rospy.Publisher('drive_cmd', Twist, queue_size=0)
-            "pub_dep_spool": rospy.Publisher('dep_spool', Float64, queue_size=0)
-            "pub_dep_linacc": rospy.Publisher('dep_linacc', Float64, queue_size=0)
+            "pub_drive_cmd": rospy.Publisher('drive_cmd', Twist, queue_size=0),
+            "pub_dep_spool": rospy.Publisher('dep_spool', Float64, queue_size=0),
+            "pub_dep_linacc": rospy.Publisher('dep_linacc', Float64, queue_size=0),
+            "pub_exc_pose": rospy.Publisher('exc_pose', Pose2D, queue_size=0)
         }
 
         self.state = {
@@ -59,7 +82,7 @@ class TeleopControl:
             "dep_spool_toggle": 0,
             "dep_linacc_toggle": 0,
             "dep_spool_start": 0.1,
-            "dep_linacc_start": 0.1"
+            "dep_linacc_start": 0.1
         }
 
         # Initialize subscribers
@@ -109,20 +132,20 @@ class TeleopControl:
     # Callback for joystick data
     def process_joystick_data(self, msg):
         # Get motor velocity commands
-        lin_vel = msg.axes[1]
-        ang_vel = msg.axes[3]
+        lin_vel = msg.axes[JOYSTICK_AXIS_LEFT_Y]
+        ang_vel = msg.axes[JOYSTICK_AXIS_RIGHT_X]
 
         # Get direction and accel_decel toggle states
-        acc_dir_toggle = msg.buttons[5]
+        acc_dir_toggle = msg.buttons[JOYSTICK_BUTTON_RB]
 
         # Get dig motor toggle button states
-        dep_spool_toggle = msg.buttons[2]
-        dep_linacc_toggle = msg.buttons[0]
+        dep_spool_toggle = msg.buttons[JOYSTICK_BUTTON_X]
+        dep_linacc_toggle = msg.buttons[JOYSTICK_BUTTON_A]
 
         # Get dig motor accel button states
         # TODO: plsfix
-        bkt_hng_acc_toggle = msg.axes[6]
-        lsc_cnv_acc_toggle = msg.axes[7]
+        bkt_hng_acc_toggle = msg.axes[JOYSTICK_AXIS_DPAD_X]
+        lsc_cnv_acc_toggle = msg.axes[JOYSTICK_AXIS_DPAD_Y]
 
         # Update accel_direction
         if self.state["acc_dir_toggle"] == 1 and acc_dir_toggle == 0:
