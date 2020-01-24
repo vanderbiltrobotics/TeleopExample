@@ -147,6 +147,8 @@ class TeleopControl:
         bkt_hng_acc_toggle = msg.axes[JOYSTICK_AXIS_DPAD_X]
         lsc_cnv_acc_toggle = msg.axes[JOYSTICK_AXIS_DPAD_Y]
 
+        # TODO: get data for Pose2D for excavation from controller
+
         # Update accel_direction
         if self.state["acc_dir_toggle"] == 1 and acc_dir_toggle == 0:
             self.state["acc_dir"] *= -1.0
@@ -166,6 +168,8 @@ class TeleopControl:
         drive_msg.linear.x=lin_vel
         drive_msg.angular.z=ang_vel*-1
         self.publishers["pub_drive_cmd"].publish(drive_msg)
+
+        # TODO: publish excavation data
 
         # Dig motor speeds
         for id in ["dep_spool", "dep_linacc"]:
