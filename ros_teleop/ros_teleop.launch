@@ -1,8 +1,7 @@
 <launch>
 
  <!-- joy node -->
-  <node respawn="true" pkg="joy"
-        type="joy_node" name="turtle_joy" >
+  <node pkg="joy" type="joy_node" name="joystick" >
     <param name="dev" type="string" value="/dev/input/js2" />
     <param name="deadzone" value="0.12" />
   </node>
@@ -19,6 +18,9 @@
   <param name="max_out_ang_vel" type="double" value="1.0"/>
   <param name="output_mode" type="string" value="vel"/>
   <param name="queue_size" type="int" value="15"/>
-  <node name="drive_speed_conversion" pkg="ros_teleop" type="drive_speed_conversion.py"/> -->
+  <node name="drive_speed_conversion" pkg="ros_teleop" type="drive_speed_conversion.py"/>-->
+
+  <!-- Deposition control node-->
+  <!-- TODO FIGURE OUT DEPOSITION LAUNCH CODE -->
 
 </launch>
